@@ -26,14 +26,6 @@ album_repository.save(album_3)
 artist_repository.select(artist_1.id)
 album_repository.select(album_1.id)
 
-artists = artist_repository.select_all()
-# for artist in artists:
-#     print(artist.__dict__)
-
-albums = album_repository.select_all()
-# for album in albums:
-#     print(album.__dict__)
-
 albums = artist_repository.albums(artist_1)
 # for album in albums:
 #     print(album.__dict__)
@@ -42,6 +34,17 @@ albums = artist_repository.albums(artist_1)
 # artist_repository.update(artist_1)
 # print(artist_1.__dict__)
 
-album_3.genre = 'heavy metal'
-album_repository.update(album_3)
-print(album_3.__dict__)
+# album_3.genre = 'heavy metal'
+# album_repository.update(album_3)
+# print(album_3.__dict__)
+
+album_repository.delete_album(album_2.id)
+artist_repository.delete_artist(artist_2.id)
+
+artists = artist_repository.select_all()
+for artist in artists:
+    print(artist.__dict__)
+
+albums = album_repository.select_all()
+for album in albums:
+    print(album.__dict__)
