@@ -35,5 +35,9 @@ albums = album_repository.select_all()
 #     print(album.__dict__)
 
 albums = artist_repository.albums(artist_1)
-for album in albums:
-    print(album.__dict__)
+# for album in albums:
+#     print(album.__dict__)
+
+artist_1.name = 'Adele'
+artist_repository.update(artist_1)
+print(artist_1.__dict__)
