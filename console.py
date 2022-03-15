@@ -38,6 +38,10 @@ albums = artist_repository.albums(artist_1)
 # for album in albums:
 #     print(album.__dict__)
 
-artist_1.name = 'Adele'
-artist_repository.update(artist_1)
-print(artist_1.__dict__)
+# artist_1.name = 'Adele'
+# artist_repository.update(artist_1)
+# print(artist_1.__dict__)
+
+album_3.genre = 'heavy metal'
+album_repository.update(album_3)
+print(album_3.__dict__)
