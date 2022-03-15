@@ -13,3 +13,6 @@ artist_repository.save(artist_1)
 
 album_1 = Album('Lemonade', 'pop', artist_1)
 album_repository.save(album_1)
+
+artist_repository.select(artist_1.id)
+album_repository.select(album_1.id)
