@@ -20,13 +20,20 @@ album_repository.save(album_1)
 album_2 = Album('Collapsed in Sunbeams', 'pop', artist_2)
 album_repository.save(album_2)
 
+album_3 = Album('Another Album', 'pop', artist_1)
+album_repository.save(album_3)
+
 artist_repository.select(artist_1.id)
 album_repository.select(album_1.id)
 
 artists = artist_repository.select_all()
-for artist in artists:
-    print(artist.__dict__)
+# for artist in artists:
+#     print(artist.__dict__)
 
 albums = album_repository.select_all()
+# for album in albums:
+#     print(album.__dict__)
+
+albums = artist_repository.albums(artist_1)
 for album in albums:
     print(album.__dict__)
